@@ -1,24 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html >
 <head>
-    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html" charset="UTF-8">
     <title>个人网站</title>
+    <style type="text/css">
+        p{
+        color:green;
+        }
+        wenben{
+        width:500px;
+        background:block;
+        }
+        .header{
+        width:1000px;
+        height:500px;
+        margin:50px auto;
+        padding:100px;
+        background-image:url("https://img1.baidu.com/it/u=3129770633,3933811923&fm=253&fmt=auto&app=138&f=JPEG?w=889&h=500");
+        background-repeat:no-repeat;
+        background-size:100% auto;
+        }
+        .hezi{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        }
+        #video-background {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -100;
+        background-size: cover;
+    }
+
+    /* 设置其他内容在视频上方 */
+    #content {
+        position: relative;
+        z-index: 1;
+        padding: 20px;
+    }
+
+    </style>
 </head>
-<body style="margin:0" align="center">
-<div style="
-max-width:760px;
-line-height:1.7;
-magin:50px auto;
-padding:50px;
-background:red;
-display:block;" >
-    <p>随便的一个标签</p>
-    <p>123456</p>
+<body style="margin:20px auto;
+max-width:1000px;" class="hezi">
+<video id="video-background" autoplay loop muted>
+<source src="" type="">
+
+
+    </video>
+<div class="hezi" id="content">
+    <p >《从零开始的异世界》</p>
+    <wenben class="hezi">主要人物：菜月昂，艾米莉雅，雷姆，拉姆</wenben>
+
+
 </div>
-<div style="
-background:blue;
-max-width:860px;
-">
+<div >
     <p>zheshixingdekuai</p>
 </div>
 </body>
