@@ -5,7 +5,9 @@
     <title>个人网站</title>
     <style type="text/css">
         p{
-        color:green;
+        color:rgb(236, 19, 8);
+        font-size: 30px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         wenben{
         width:500px;
@@ -43,24 +45,48 @@
         z-index: 1;
         padding: 20px;
     }
+    .colorsize{
+        width: 25px;
+        height: 25px;
+        padding:1px;
+        border: 10cap;
+        margin: auto;
+
+
+    }
+    .bordersize{
+        width: 200px;
+        height: 25px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        background-color: rgb(36, 19, 215);
+    }
+    .subsize{
+        width: auto;
+        height: 25px;
+        background-color: rgb(36, 19, 215);
+    }
 
     </style>
 </head>
 <body style="margin:20px auto;
 max-width:1000px;" class="hezi">
-<video id="video-background" autoplay loop muted>
-<source src="" type="">
-
-
-    </video>
+<video  id="video-background"   autoplay loop muted>
+    <source src="海岸线.mp4" type="video/mp4">
+</video>
 <div class="hezi" id="content">
-    <p >《从零开始的异世界》</p>
-    <wenben class="hezi">主要人物：菜月昂，艾米莉雅，雷姆，拉姆</wenben>
+    <p >从零开始学习</p>
+
 
 
 </div>
 <div >
-    <p>zheshixingdekuai</p>
+    <p>先来制作登录页面吧</p>
+    <input type="text" name="uname" value="请输入你的用户名" class="bordersize" ></br>
+    <input type="password" name="password" class="bordersize"></br>
+    <input type="button" value="登录" class="subsize">
+    <input type="color" class="colorsize">
+    <p>暂时只能做个框架</p>
 </div>
 </body>
 </html>
