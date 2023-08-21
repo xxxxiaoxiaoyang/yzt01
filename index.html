@@ -4,92 +4,66 @@
     <meta http-equiv="content-type" content="text/html" charset="UTF-8">
     <title>个人网站</title>
     <style type="text/css">
-        p{
-        color:rgb(236, 19, 8);
-        font-size: 30px;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        *{
+            margin:0;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
-        wenben{
-        width:500px;
-        background:block;
+        section{
+            text-align: center;
+            min-height: 100vh;
+            background: linear-gradient(to top,rgb(84, 0, 251),rgb(207, 164, 160))          
         }
         .header{
-        width:1000px;
-        height:500px;
-        margin:50px auto;
-        padding:100px;
-        background-image:url("https://img1.baidu.com/it/u=3129770633,3933811923&fm=253&fmt=auto&app=138&f=JPEG?w=889&h=500");
-        background-repeat:no-repeat;
-        background-size:100% auto;
+            display: flex;
+            justify-content: space-between;
         }
-        .hezi{
-        display:flex;
-        flex-direction:column;
-        align-items:center;
+        .jianjie{
+            width:100px;
+            height:30px;
+            background: linear-gradient(to top,rgb(118, 118, 236),rgb(207, 164, 160));
+            float: right;
+            margin-top: 10px;
+            margin-right: 10px;
+            text-align: center;
+            border-radius: 15px;
+
+
         }
-        #video-background {
-        position: fixed;
-        right: 0;
-        bottom: 0;
-        min-width: 100%;
-        min-height: 100%;
-        width: auto;
-        height: auto;
-        z-index: -100;
-        background-size: cover;
-    }
-
-    /* 设置其他内容在视频上方 */
-    #content {
-        position: relative;
-        z-index: 1;
-        padding: 20px;
-    }
-    .colorsize{
-        width: 25px;
-        height: 25px;
-        padding:1px;
-        border: 10cap;
-        margin: auto;
+        .login{
+            
+            width:50px;
+            height:30px;
+            background:linear-gradient(to bottom,rgb(207, 164, 160),rgb(251, 1, 234));
+            float: right;
+            margin-top: 10px;
+            margin-right: 10px;
+            text-align: center;
+            border-radius: 15px;
 
 
-    }
-    .bordersize{
-        width: 200px;
-        height: 25px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        background-color: rgb(36, 19, 215);
-    }
-    .subsize{
-        width: auto;
-        height: 25px;
-        background-color: rgb(36, 19, 215);
-    }
-    .button{
-        width: 40px;
-        height: 60px;
-        margin: auto;
-    }
+        }
+        .login a{
+            text-decoration: none;
+            margin: auto;
+            font-size:15px;
+            color: white;
+        }
+
+
+
 
     </style>
 </head>
-<body style="margin:20px auto;
-max-width:1000px;" class="hezi">
-<video  id="video-background" src="海岸线.mp4"  autoplay loop muted>
-</video>
-<div class="hezi" id="content">
-    <p >从零开始学习</p>
-
-
-
+<body >
+<section>
+    <div class="header">
+    <div class="jianjie">欢迎</div>
+<div class="login">
+    <a href="./denglu.html" >登录</a>
 </div>
-<div >
-    <p>先来制作登录页面吧</p>
-    <wenben>进来走个流程呗=></wenben>
-    <a href="./denglu.html" class="button">登录</a>
-
-    <p>暂时只能做个框架</p>
 </div>
+<div>略......</div>
+</section>
 </body>
 </html>
