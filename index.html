@@ -3,144 +3,247 @@
 <head>
     <meta http-equiv="content-type" content="text/html" charset="UTF-8">
     <title>个人网站</title>
+    <link rel="stylesheet" href="./index.css">
     <style type="text/css">
-        *{
-            margin:0;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-        section{
-            text-align: center;
-            min-height: 100vh;
-            background: linear-gradient(to top,rgb(84, 0, 251),rgb(207, 164, 160))          
-        }
-        .header{
-            display: flex;
-            justify-content: space-between;
-        }
-        .jianjie{
-            width:100px;
-            height:30px;
-            background: linear-gradient(to top,rgb(118, 118, 236),rgb(207, 164, 160));
-            float: right;
-            margin-top: 10px;
-            margin-right: 10px;
-            text-align: center;
-            border-radius: 15px;
+        * {
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
+section {
 
-        }
-        .login{
-            
-            width:50px;
-            height:30px;
-            background:linear-gradient(to bottom,rgb(207, 164, 160),rgb(251, 1, 234));
-            float: right;
-            margin-top: 10px;
-            margin-right: 10px;
-            text-align: center;
-            border-radius: 15px;
+  text-align: center;
+  min-height: 100vh;
+  background-color: black;
+  /* background: linear-gradient(to top,rgb(84, 0, 251),rgb(207, 164, 160))           */
+  background-image: url('./背景图.jpg');
+  
+}
 
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+.login {
+  width: 50px;
+  height: 30px;
+  background: linear-gradient(to bottom, #cfa4a0, #fb01ea);
+  float: right;
+  margin-top: 10px;
+  margin-right: 10px;
+  text-align: center;
+  border-radius: 15px;
+}
 
-        }
-        .login a{
-            text-decoration: none;
-            margin: auto;
-            font-size:15px;
-            color: white;
-        }
-        .wenzi01{
-            border-radius: 10px;
-            margin-top: 20px;
-            width:50%;
-            height:30px;
-            font-size: 20px;
-            font-family: 微软雅黑;
-            text-align: center;
-            border: none;
-            background-color: rgba(253, 254, 255, 0.3);
-            border-bottom:2px solid rgba(0,0,0,.1);
-            border-right: 2px solid rgba(1,1,1,.2);
-            box-shadow: 5px 1px 5px rgba(25,45,78,.3);
-        }
-        .choujiangbutton{
-            height:30px;
-            border-radius: 15px;
-            margin-top: 10px;
-            width: 70px;
-            font-size: 20px;
-            font-family: 宋体;
-            letter-spacing: 5px;
-            background: rgba(0, 0, 255, 0);
-            border: none;
-            outline: none;
-            border-bottom:2px solid rgba(0,0,0,.1);
-            border-right: 2px solid rgba(1,1,1,.2);
-            box-shadow: 5px 1px 5px rgba(25,45,78,.3);
-        }
+.login a {
+  text-decoration: none;
+  margin: auto;
+  font-size: 15px;
+  color: white;
+}
 
+.wenzi01 {
+  border-radius: 10px;
+  margin-top: 20px;
+  width: 50%;
+  height: 30px;
+  font-size: 20px;
+  font-family: 微软雅黑;
+  text-align: center;
+  border: none;
+  background-color: rgba(253, 254, 255, 0.3);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  border-right: 2px solid rgba(1, 1, 1, 0.2);
+  box-shadow: 5px 1px 5px rgba(25, 45, 78, 0.3);
+}
 
+.choujiangbutton {
+  height: 30px;
+  border-radius: 15px;
+  margin-top: 10px;
+  width: 70px;
+  font-size: 20px;
+  font-family: 宋体;
+  letter-spacing: 5px;
+  background: rgba(0, 0, 255, 0);
+  border: none;
+  outline: none;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  border-right: 2px solid rgba(1, 1, 1, 0.2);
+  box-shadow: 5px 1px 5px rgba(25, 45, 78, 0.3);
+}
 
-
-
+.dong1 {
+  position: fixed;
+  border-radius: 50%;
+  width: 4px;
+  height: 4px;
+  background-color: white;
+  
+}
+@keyframes moveup1{
+    100%{
+        transform: translateY(+100vh) translateX(+100vw);
+    }
+}
+.dong2 {
+  position: fixed;
+  border-radius: 50%;
+  width: 4px;
+  height: 4px;
+  top: -100vh;
+  left: -100vw;
+  background-color: black;
+}
+@keyframes moveup2{
+    100%{
+        transform: translateY(+100vh) translateX(+100vw);
+    }
+}
+.dong3 {
+  position: fixed;
+  border-radius: 50%;
+  width: 4px;
+  height: 4px;
+  top:-100vh;
+  background-color: black;
+  
+}
+@keyframes moveup3{
+    100%{
+        transform: translateY(+100vh) translateX(+100vw);
+    }
+}
+.dong4 {
+  position: fixed;
+  border-radius: 50%;
+  width: 4px;
+  height: 4px;
+  
+  left: -100vw;
+  background-color: black;
+  
+}
+@keyframes moveup4{
+    100%{
+        transform: translateY(+100vh) translateX(+100vw);
+    }
+}
     </style>
     <script>
-        function cs1(){
-            // alert('感谢使用！');
-            var h1=document.createElement('wenben');
-            var text=document.createTextNode('继续');
-            h1.appendChild(text);
-            var br=document.createElement('br')
-            var n=document.getElementById('content');
-            n.appendChild(h1);
-            n.appendChild(br);
-        }
-        function cs2(){
-            var content='<wenben id="wenben" >继续</wenben></br>';
-            var x=document.getElementById('content');
-            x.innerHTML=x.innerHTML+content
-            colorchange('content')
 
-        }
-        function colorchange(x){
-            var col=document.getElementById(x);
-            if (col.style.color=='red'){
-            col.style.color='blue';
-            }
-            else{
-                col.style.color='red';
-            }
-        }
-        function randomnum(min,max){
-            var i;
-            i=(Math.random()*(max-min+1))+min;
-            var y= parseInt(i);
-            // alert(y);
-            var data0=document.getElementById('wenzi').value;
-            data1=data0.split(' ');
-            // alert(data1);
-            x=data1.length;
-            // alert(x);
-            var a1=(y-1)%x;
-            var a2=data1[a1];
-            alert(a2);
-        }
+function cs1(){
+    // alert('感谢使用！');
+    var h1=document.createElement('wenben');
+    var text=document.createTextNode('继续');
+    h1.appendChild(text);
+    var br=document.createElement('br')
+    var n=document.getElementById('content');
+    n.appendChild(h1);
+    n.appendChild(br);
+}
+function cs2(){
+    var content='<wenben id="wenben" >继续</wenben></br>';
+    var x=document.getElementById('content');
+    x.innerHTML=x.innerHTML+content
+    colorchange('content')
+
+}
+function colorchange(x){
+    var col=document.getElementById(x);
+    if (col.style.color=='red'){
+    col.style.color='blue';
+    }
+    else{
+        col.style.color='red';
+    }
+}
+function randomnum(min,max){
+    var i;
+    i=(Math.random()*(max-min+1))+min;
+    var y= parseInt(i);
+    // alert(y);
+    var data0=document.getElementById('wenzi').value;
+    data1=data0.split(' ');
+    // alert(data1);
+    x=data1.length;
+    // alert(x);
+    var a1=(y-1)%x;
+    var a2=data1[a1];
+    alert(a2);
+}
+function random(n,m){
+    var content1 = document.getElementById('donghua1');
+    var content2 = document.getElementById('donghua2');
+    var content3 = document.getElementById('donghua3');
+    var content4 = document.getElementById('donghua4');
+    var x=parseInt(Math.random()*100);
+    var y= parseInt(Math.random() * 100);
+    
+    var shu1=x+'vw '+y+'vh #fff';
+    var shu3 = x + 'vw ' + y + 'vh #fff';
+    // alert(shu);
+
+    for(var i=0;i<n;i++){
+        var x1= parseInt(Math.random() * 100);
+        var y1= parseInt(Math.random() * 100);
+        shu1=shu1+','+ x1 + 'vw ' + y1 + 'vh #fff';
+    }
+
+    for (var i = 0; i < m; i++) {
+        var x3 = parseInt(Math.random() * 100);
+        var y3 = parseInt(Math.random() * 100);
+        shu3 = shu3 + ',' + x3 + 'vw ' + y3 + 'vh #fff';
+    }
+    content1.style.boxShadow = shu1;
+    content2.style.boxShadow = shu1;
+    content3.style.boxShadow = shu1;
+    content4.style.boxShadow = shu1;
+
+
+    content1.style.animation = 'moveup1 3s linear infinite';
+    content2.style.animation = 'moveup2 3s linear infinite';
+    content3.style.animation = 'moveup3 3s linear infinite';
+    content4.style.animation = 'moveup4 3s linear infinite';
+
+}
+function pause(){
+    var content1 = document.getElementById('donghua1');
+    var content2 = document.getElementById('donghua2');
+    var content3 = document.getElementById('donghua3');
+    var content4 = document.getElementById('donghua4');
+    content1.style.animation = '';
+    content2.style.animation = '';
+    content3.style.animation = '';
+    content4.style.animation = '';
+    content1.style.boxShadow = '';
+    content2.style.boxShadow = '';
+    content3.style.boxShadow = '';
+    content4.style.boxShadow = '';
+
+}
+
     </script>
 </head>
 <body >
+    <div class="dong1" id="donghua1"></div>
+    <div class="dong2" id="donghua2"></div>
+    <div class="dong3" id="donghua3"></div>
+    <div class="dong4" id="donghua4"></div>
 <section>
-    <div class="header">
-    <div class="jianjie">欢迎</div>
 <div class="login">
     <a href="./denglu.html" >登录</a>
 </div>
-</div>
-<div>略......</div>
+
+
 <div id="content">
-    <button onclick="cs2()">点击一下</button>
-<h1 id="colorc" onclick="colorchange('colorc')"  >点击一下</h1>
-<input class='wenzi01' id="wenzi" type="text" placeholder="在这里输入你要抽取的内容"/></br>
-<button class="choujiangbutton" onclick="randomnum(0,100)">抽取</button>
+    <button id="xingkong" onclick="random(1000,500)" style="margin-top: 100px;width: 200px;height: 30px;border-radius: 20px;background-color: rgba(0,0,0,.1);">星空特效</button>
+    <button id="zhongzhi" onclick="pause()">退出</button>
+
+<h1></h1>
+<input  class='wenzi01' id="wenzi" type="text" placeholder="在这里输入你要抽取的内容"/></br>
+<button class="choujiangbutton" onclick="randomnum(0,10000)">抽取</button>
 </div>
 </section>
 </body>
