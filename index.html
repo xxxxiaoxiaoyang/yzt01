@@ -10,30 +10,80 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+body{
+    background-image: url('./背景图.jpg');
+      background-size:100vw;
+    /* backdrop-filter: blur(10px); */
 
+}
 section {
+position: absolute;
 
-  text-align: center;
-  min-height: 100vh;
-  background-color: black;
-  /* background: linear-gradient(to top,rgb(84, 0, 251),rgb(207, 164, 160))           */
-  background-image: url('./背景图.jpg');
-  
+text-align: center;
+min-height: 100vh;
+width: 100%;
+background-color: rgba(0, 0, 0, 0);
+/* background: linear-gradient(to top,rgb(84, 0, 251),rgb(207, 164, 160))           */
+/* background-image: url('./背景图.jpg'); */
+background-size:100vw;
+z-index: 3;
+
+
+}
+.texiao{
+position: absolute;
+top: 10px;
+left: 10px;
+
+}
+.choujiang{
+    position: absolute;
+    width: 600px;
+    height: 150px;
+    top: 30%;
+    left: 30%;
+    backdrop-filter: blur(20px);
+
+}
+.choujiang p{
+    font-size: large;
+    margin-top:5px ;
+    color: rgb(226, 209, 209);
+}
+.fj01{
+    display: none;
+    position:absolute;
+    backdrop-filter: blur(10px);
+
+    top:20vh;
+    width:100vw;
+    height:70vh;
+    z-index: -9;
+    background-image: url(./风景图01.jpg);
 }
 
+.fj02{
+    display: none;
+    position: absolute;
+    top: 40vh;
+    width: 100%;
+    height: 40vh;
+    background-image: url(./风景图02.jpg);
+    z-index: -4;
+}
 .header {
   display: flex;
   justify-content: space-between;
 }
 .login {
-  width: 50px;
-  height: 30px;
-  background: linear-gradient(to bottom, #cfa4a0, #fb01ea);
-  float: right;
-  margin-top: 10px;
-  margin-right: 10px;
-  text-align: center;
-  border-radius: 15px;
+position: absolute;
+width: 50px;
+height: 30px;
+background: linear-gradient(to bottom, #140f5b, #3d3942);
+top: 10px;
+right: 10px;
+text-align: center;
+border-radius: 15px;
 }
 
 .login a {
@@ -46,41 +96,41 @@ section {
 .wenzi01 {
   border-radius: 10px;
   margin-top: 20px;
-  width: 50%;
+  width: 500px;
   height: 30px;
   font-size: 20px;
   font-family: 微软雅黑;
   text-align: center;
   border: none;
-  background-color: rgba(253, 254, 255, 0.3);
+  background-color: rgba(86, 38, 12, 0.3);
   border-bottom: 2px solid rgba(0, 0, 0, 0.1);
   border-right: 2px solid rgba(1, 1, 1, 0.2);
   box-shadow: 5px 1px 5px rgba(25, 45, 78, 0.3);
 }
 
 .choujiangbutton {
+    margin-top: 10px;
   height: 30px;
   border-radius: 15px;
-  margin-top: 10px;
   width: 70px;
   font-size: 20px;
   font-family: 宋体;
   letter-spacing: 5px;
-  background: rgba(0, 0, 255, 0);
+  background: rgba(162, 154, 237, 0.392);
   border: none;
   outline: none;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
-  border-right: 2px solid rgba(1, 1, 1, 0.2);
-  box-shadow: 5px 1px 5px rgba(25, 45, 78, 0.3);
+  /* box-shadow: 5px 1px 5px rgb(45, 35, 132) ; */
 }
 
 .dong1 {
-  position: fixed;
-  border-radius: 50%;
-  width: 4px;
-  height: 4px;
-  background-color: white;
-  
+left: -5px;
+position: fixed;
+border-radius: 50%;
+width: 4px;
+height: 4px;
+background-color: white;
+z-index: 999;
+
 }
 @keyframes moveup1{
     100%{
@@ -88,13 +138,15 @@ section {
     }
 }
 .dong2 {
-  position: fixed;
-  border-radius: 50%;
-  width: 4px;
-  height: 4px;
-  top: -100vh;
-  left: -100vw;
-  background-color: black;
+left: -5px;
+position: fixed;
+border-radius: 50%;
+width: 4px;
+height: 4px;
+top: -100vh;
+left: -100vw;
+background-color: black;
+z-index: 999;
 }
 @keyframes moveup2{
     100%{
@@ -102,13 +154,14 @@ section {
     }
 }
 .dong3 {
-  position: fixed;
-  border-radius: 50%;
-  width: 4px;
-  height: 4px;
-  top:-100vh;
-  background-color: black;
-  
+left: -5px;
+position: fixed;
+border-radius: 50%;
+width: 4px;
+height: 4px;
+top:-100vh;
+background-color: black;
+z-index: 999;
 }
 @keyframes moveup3{
     100%{
@@ -116,19 +169,36 @@ section {
     }
 }
 .dong4 {
-  position: fixed;
-  border-radius: 50%;
-  width: 4px;
-  height: 4px;
-  
-  left: -100vw;
-  background-color: black;
+left: -5px;
+position: fixed;
+border-radius: 50%;
+width: 4px;
+height: 4px;
+z-index: 999;
+left: -100vw;
+background-color: black;
   
 }
 @keyframes moveup4{
     100%{
         transform: translateY(+100vh) translateX(+100vw);
     }
+}
+#xingkong{
+
+width: 60px;
+height: 30px;
+border-radius: 20px;
+background-color: rgba(0,0,0,.1);
+color: white;
+}
+#zhongzhi{
+
+width: 50px;
+height: 30px;
+border-radius: 20px;
+background-color: rgba(0,0,0,.6);
+color: white;
 }
     </style>
     <script>
@@ -227,24 +297,28 @@ function pause(){
     </script>
 </head>
 <body >
+
+<section>
+    <div class="texiao">
     <div class="dong1" id="donghua1"></div>
     <div class="dong2" id="donghua2"></div>
     <div class="dong3" id="donghua3"></div>
     <div class="dong4" id="donghua4"></div>
-<section>
-<div class="login">
-    <a href="./denglu.html" >登录</a>
-</div>
-
-
-<div id="content">
-    <button id="xingkong" onclick="random(1000,500)" style="margin-top: 100px;width: 200px;height: 30px;border-radius: 20px;background-color: rgba(0,0,0,.1);">星空特效</button>
+    <button id="xingkong" onclick="random(1000,500)">特效</button>
     <button id="zhongzhi" onclick="pause()">退出</button>
-
-<h1></h1>
-<input  class='wenzi01' id="wenzi" type="text" placeholder="在这里输入你要抽取的内容"/></br>
-<button class="choujiangbutton" onclick="randomnum(0,10000)">抽取</button>
-</div>
+    </div>
+    <div class="fj01"></div>
+    <div class="fj02"></div>
+    <div class="login">
+         <a href="./denglu.html" >登录</a>
+    </div>
+    </br>
+    <div class="choujiang">
+        <p>输入格式为“a b c”在每一个选项后面加上空格</p>
+        <p>输出结果为其中一个</p>
+        <input class='wenzi01' id="wenzi" type="text" placeholder="在这里输入你要抽取的内容"/></br>
+        <button class="choujiangbutton" onclick="randomnum(0,10000)">抽取</button>
+    </div>
 </section>
 </body>
 </html>
